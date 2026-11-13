@@ -1,0 +1,60 @@
+:root {
+  --fundo: #14122b;
+  --superficie: #1f1c40;
+  --texto: #ece9ff;
+  --texto-suave: #b4afd9;
+  --destaque: #ff5c8a;
+  --preco: #4ad8ff;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+#root { display: flex; flex-direction: column; min-height: 100vh; }
+a { color: var(--destaque); }
+h1 { margin-top: 0; }
+
+.header {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  justify-content: space-between; align-items: center;
+  padding: 16px 24px; background: var(--superficie);
+}
+.logo { font-size: 1.3rem; font-weight: 700; }
+.menu { display: flex; flex-wrap: wrap; gap: 20px; }
+.menu a { color: var(--texto); text-decoration: none; }
+.menu a:hover { color: var(--destaque); }
+
+.conteudo { flex: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+.footer { text-align: center; padding: 16px; background: var(--superficie); color: var(--texto-suave); }
+
+.hero { text-align: center; padding: 48px 0; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+.hero p { max-width: 560px; margin: 0 auto 24px; color: var(--texto-suave); }
+
+.texto { max-width: 640px; }
+.texto p { color: var(--texto-suave); line-height: 1.6; }
+
+.grade { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card { background: var(--superficie); border-radius: 10px; overflow: hidden; }
+.card img { width: 100%; display: block; }
+.card-corpo { padding: 16px; }
+.card-corpo h3 { margin: 4px 0 8px; }
+.card-corpo p { margin: 0 0 8px; color: var(--texto-suave); }
+.categoria { font-size: 0.85rem; color: var(--destaque); }
+.card-corpo .preco { color: var(--preco); font-weight: 700; }
+
+.botao {
+  background: var(--destaque); color: #fff; border: 0; border-radius: 6px;
+  padding: 10px 18px; font-size: 1rem; cursor: pointer;
+}
+.botao:hover { filter: brightness(1.1); }
+.botao:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--preco); outline-offset: 2px; }
+
+.formulario { display: flex; flex-direction: column; gap: 8px; }
+.formulario input, .formulario textarea {
+  padding: 10px; border-radius: 6px; border: 1px solid #3a3670;
+  background: var(--superficie); color: var(--texto); font: inherit;
+}
+.formulario .botao { align-self: flex-start; margin-top: 8px; }
